@@ -44,8 +44,8 @@ stage('Sonar Analysis')
 		rtMavenDeployer (
                     id: 'deployer',
                     serverId: '123456789@artifactory',
-		    snapshotRepo: 'devopsassignment',
-                    releaseRepo: 'devopsassignment_release'
+		    snapshotRepo: 'devopsassignmentakanksha',
+                    releaseRepo: 'devopsassignmentakanksha_release'
                     
                 )
                 rtMavenRun (
