@@ -74,7 +74,7 @@ stage('Sonar Analysis')
 			steps
 			{
 				echo "Deploying war file"
-				bat "docker run --name javamavenappcontainer3 -d -p 9004:8080 javamavenapp:2"
+				bat "docker run --name javamavenappcontainer4 -d -p 9006:8080 javamavenapp:2"
 			}
 		}
   }
