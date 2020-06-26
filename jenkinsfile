@@ -59,5 +59,14 @@ stage('Sonar Analysis')
 			
 		}
 	}
+	
+	stage ('Dcoker image')
+	    	{
+			steps
+			{
+				echo "Building docker image"
+				bat returnStdout: true, script: 'docker build -t javamavenapp:2 .'
+			}
+		}
   }
   }
