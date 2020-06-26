@@ -68,5 +68,14 @@ stage('Sonar Analysis')
 				bat returnStdout: true, script: 'docker build -t javamavenapp:2 .'
 			}
 		}
+		
+		stage ('Docker Deployment')
+	    	{
+			steps
+			{
+				echo "Deploying war file"
+				bat "docker run --name javamavenappcontainer -d -p 9005:8080 javamavenapp:2"
+			}
+		}
   }
   }
